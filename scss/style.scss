@@ -1,0 +1,12 @@
+// Override Bs4 variables and custom mixins
+@import "huisstijlteam";
+@import "mixinsteam";
+
+// Link to BS4
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Custom code/partials
+@import "basisopmaakteam";
+@import "Imani";
+@import "Cindy";
+@import "Yusuf";

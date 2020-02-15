@@ -1,0 +1,73 @@
+// zelfde logo, navigatie, maar niet zelfde layout
+@import "mixinsteam";
+@import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$lettertypehoofdingen: 'Frank Ruhl Libre', serif;
+$lettertype: 'Roboto', sans-serif;
+$achtergrondkleur: #AAABB8;
+$letterkleur: #2B2B2B;
+$border-radius: 4%;
+
+body {
+  background-color: lighten($letterkleur,60%);
+  color: darken($achtergrondkleur,45%);
+  display: flex;
+  flex-direction: column;
+}
+.afbeelding {
+  background-image: url(../images/achtergrond_mario.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 780px;
+}
+
+.navbar-toggler, .navbar-toggler-right, .collapsed {
+  color: white !important;
+  background-color: inherit;
+}
+
+footer {
+  flex-shrink: 0;
+  a {
+    @include link(white, inherit);
+    text-decoration: underline;
+    &:hover {
+      @include link(yellow, inherit);
+      cursor: pointer;
+    }
+    &:focus {
+      @include link(yellow, inherit);
+    }
+  }
+}
+
+#mainNav, #mainNav a, footer {
+  background-color: #494949;
+  color: white !important;
+}
+
+h1, h2 ,h3 , h4{
+  font-family: $lettertypehoofdingen;
+}
+
+p {
+  font-family: $lettertype;
+  padding-top: 5px;
+}
+
+a.nav-link{
+  @include link(white, inherit);
+  text-decoration: underline;
+}
+
+a {
+  @include link(inherit, inherit);
+  text-decoration: underline;
+  font-weight: bold;
+
+  &:hover {
+    @include link(orangered, inherit);
+  }
+}
+

@@ -1,0 +1,96 @@
+// console 1ste-4de generatie
+
+.first-gen, .even-gen, .odd-gen {
+  flex: 1 0 auto;
+}
+
+.first-gen {
+  padding-top: 150px;
+}
+
+.even-gen {
+  padding-top: 20px;
+  background-color: lighten($letterkleur,65%);
+}
+
+.odd-gen {
+  padding-top: 20px;
+  background-color: lighten($letterkleur, 60%);
+}
+
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th, td {
+  padding-right: 20px;
+}
+
+table {
+  margin: 50px auto;
+}
+
+.button{
+  color: black;
+  background-color: lighten($letterkleur,70%);
+  font-size: 16px;
+  text-decoration: underline;
+  border-color: #494949;
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+
+.border {
+  background-color: lighten($letterkleur,70%);
+  border: 1px dotted #000 !important;
+  @include border-radius($radius: $border-radius);
+  padding: 10px;
+}
+
+@keyframes animation1 {
+  0% {
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.transform:hover {
+  animation-name: animation1;
+  animation-duration: 1.5s;
+
+}
+
+.transitie {
+  font-size: 2em;
+  transition: font-size 1s ease-in-out;
+  &:hover {
+    font-size: 4em;
+  }
+}
+
+.dropdown-menu {
+  width: 350px;
+  background-color: inherit;
+}
+
+.accordion {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ui-accordion-header-active {
+  background-color: darkblue;
+}
+
+.anchor::before {
+  content:"";
+  display:block;
+  height:150px; /* fixed header height*/
+  margin:-150px 0 0; /* negative fixed header height */
+}
+
